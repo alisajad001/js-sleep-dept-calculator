@@ -34,3 +34,22 @@ const getIdealSleepHours = () => {
     const idealHours = 6;
     return idealHours * 7;
 }
+
+// 4. Calculate sleep dept
+const calculateSleepDept = () => {
+    const actualSleepHours = getActualSleepHours();
+    const idealSleepHours = getIdealSleepHours();
+
+    if (actualSleepHours === idealSleepHours) {
+        console.log(idealSleepHours - actualSleepHours);
+        console.log("You've got the perfect amount of sleep");
+    } else if(actualSleepHours > idealSleepHours) {
+        console.log(idealSleepHours - actualSleepHours);
+        console.log("You've got more sleep than needed");
+    } else if(actualSleepHours < idealSleepHours) {
+        console.log(idealSleepHours - actualSleepHours);
+        console.log("You've got less sleep hours and you must get some rest");
+    }
+}
+
+calculateSleepDept()
